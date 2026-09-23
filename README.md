@@ -60,7 +60,26 @@ curl --version
 
 ### 1.3 Аналіз у DevTools (вкладка Network)
 
-Запит `GET https://dummyjson.com/products`: статус `200 OK`, remote address `104.21.61.23:443`, `content-type: application/json; charset=utf-8`, `server: cloudflare`, є заголовок `etag`. TTFB — 30.14 мс, завантаження вмісту — 1.47 мс. Фази DNS Lookup та Initial connection відсутні, бо браузер повторно використав уже відкрите з'єднання (keep-alive).
+| Параметр | Значення |
+| --- | --- |
+| Request URL | `https://dummyjson.com/products` |
+| Request Method | `GET` |
+| Status Code | `200 OK` |
+| Remote Address | `104.21.61.23:443` |
+| content-type | `application/json; charset=utf-8` |
+| date | `Mon, 21 Sep 2026 16:00:04 GMT` |
+| server | `cloudflare` |
+| etag | `W/"ac3a-Q0j5X7Zb/GG4CpZwhP3POutAwN4"` |
+| accept-encoding | `gzip, deflate, br, zstd` |
+
+**Timing:**
+
+| Фаза | Тривалість |
+| --- | --- |
+| DNS Lookup | 0 мс (з'єднання повторно використане, keep-alive) |
+| Initial connection | 0 мс (з'єднання повторно використане, keep-alive) |
+| Waiting for server response (TTFB) | 30.14 мс |
+| Content Download | 1.47 мс |
 
 ![DevTools 1](screenshots/screenshot-5.png)
 ![DevTools 2](screenshots/screenshot-6.png)

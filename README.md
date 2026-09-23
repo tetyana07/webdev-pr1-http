@@ -115,7 +115,6 @@ curl https://dummyjson.com/auth/me -H "Authorization: Bearer <TOKEN>"
 curl -s -o NUL -w "DNS: %{time_namelookup}s | TCP: %{time_connect}s | TLS: %{time_appconnect}s | TTFB: %{time_starttransfer}s | Total: %{time_total}s\n" https://dummyjson.com/products
 ```
 
-> На Linux/macOS замість `NUL` використовуйте `/dev/null`. Значення `time_appconnect` накопичувальне (включає DNS і TCP), тому реальний час TLS-рукостискання приблизно 0.05 с.
 
 ![timing](screenshots/screenshot-15.png)
 
@@ -129,7 +128,7 @@ curl -s -o NUL -w "DNS: %{time_namelookup}s | TCP: %{time_connect}s | TLS: %{tim
 curl -v https://dummyjson.com/products/1
 ```
 
-- **TCP:** `104.21.61.23`, порт `443` (домен також резолвиться в `172.67.205.42`).
+- **TCP:** `104.21.61.23`, порт `443`.
 - **ClientHello / ServerHello:** curl зі Schannel не виводить їх окремими рядками; видно узгодження ALPN (`http/1.1`) та повідомлення про перепогодження параметрів з'єднання.
 - **Сертифікат:** видавець — Google Trust Services (CN=WE1), дійсний з 08.08.2026 по 06.11.2026, SAN — `dummyjson.com` і `*.dummyjson.com`.
 - **Протокол і шифр:** TLS 1.3, AES-256.

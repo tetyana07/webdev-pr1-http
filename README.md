@@ -13,9 +13,9 @@
 | --- | --- |
 | ОС | Windows |
 | curl | 8.21.0 (Schannel) |
+| Термінал | cmd (curl), PowerShell (перевірка сертифіката) |
 | Клієнт API | Postman |
-| Редактор | Visual Studio Code |
-| Браузер | Chromium-браузер із DevTools |
+| Браузер | Microsoft Edge 153 (DevTools) |
 | Тестові API | <https://dummyjson.com/>, <https://httpbin.org/> |
 
 ## Структура репозиторію

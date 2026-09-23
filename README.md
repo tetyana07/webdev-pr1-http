@@ -76,7 +76,7 @@ curl --version
 ```bash
 curl "https://dummyjson.com/users?limit=2&select=firstName,email"
 
-curl -X POST https://dummyjson.com/posts/add -H "Content-Type: application/json" -d "{\"title\":\"My test post\",\"userId\":5}"
+curl -X POST https://dummyjson.com/posts/add -H "Content-Type: application/json" -d "{\"title\":\"My test post\",\"userId\":1}"
 ```
 
 ![curl GET/POST](screenshots/screenshot-9.png)
@@ -189,7 +189,7 @@ curl -i -X OPTIONS https://httpbin.org/post -H "Origin: https://my-college-app.e
 
 ---
 
-## Контрольні питання
+Контрольні питання
 1. Чим відрізняється стартовий рядок HTTP-запиту від статусного рядка HTTP-відповіді?
 
 Стартовий рядок запиту містить:
@@ -278,8 +278,7 @@ Preflight-запит — це попередній HTTP-запит методо�
 Origin;
 Access-Control-Request-Method;
 Access-Control-Request-Headers.
-
-## Висновки
+Висновки
 
 У ході виконання практичної роботи було досліджено принципи роботи протоколу HTTP/HTTPS та структуру клієнт-серверної взаємодії. Було опрацьовано основні HTTP-методи GET, POST, PUT і DELETE, коди статусів та керуючі заголовки.
 

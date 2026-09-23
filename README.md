@@ -25,7 +25,6 @@
 ```text
 .
 ├── README.md                 # цей файл
-├── report/                   # повний звіт (.docx)
 ├── postman/                  # колекція Postman (postman_collection.json)
 └── screenshots/              # скриншоти виконання
 ```
